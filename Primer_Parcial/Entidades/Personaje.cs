@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public abstract class Personaje
+    public class Personaje
     {
         private List<EHabilidades> listaHabilidades;
         protected string nombre;
@@ -25,23 +25,22 @@ namespace Entidades
 
         }
 
-        //Carga las habilidades de los personajes
+        //obtiene las habilidades de los personajes
         private string ListaHabilidades
         {
             get {
                 StringBuilder sb = new StringBuilder();
                 sb.AppendLine($"Las habilidades son: ");
-                foreach (EHabilidades habilidades  in listaHabilidades)
+                foreach (EHabilidades habilidades  in this.listaHabilidades)
                 { 
                     sb.AppendLine($"{habilidades}");
                 }
                 
                 return sb.ToString();
-                ; }
+                ; 
+            }
 
         }
-
-        protected abstract string Nombre {get;}
 
         /// <summary>
         /// Al igualar la lista de personajes con una personaje, devuelve si esta el personaje
@@ -64,6 +63,7 @@ namespace Entidades
             }
             return false;
         }
+
         /// <summary>
         /// Al igualar la lista de personajes con una personaje, devuelve si no esta el personaje
         /// </summary>
@@ -90,11 +90,12 @@ namespace Entidades
             return listaPersonaje;
 
          }
+
         /// <summary>
         /// muestra los datos del personaje
         /// </summary>
         /// <returns>retorna un string</returns>
-        public override string ToString()
+        public string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine($"El Personaje es: {this.nombre}");
@@ -102,6 +103,5 @@ namespace Entidades
 
             return sb.ToString() ;
         }
-
     }
 }

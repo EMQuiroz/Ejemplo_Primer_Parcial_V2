@@ -26,7 +26,7 @@ namespace Entidades
         } 
 
         /// <summary>
-        /// Muestra toda la informacion de los perdonajes
+        /// Muestra toda la informacion de los personajes
         /// </summary>
         /// <returns> retorna un texto</returns>
         public static string MostrarInformacion() 
@@ -38,14 +38,13 @@ namespace Entidades
                 if(auxPersonaje is Avenger) 
                 {
                     //modifico el AppendLine por un AppendFormat
-                    sb.AppendFormat($"****** AVENGER ****** \n {auxPersonaje.ToString()}");
+                    sb.AppendFormat($"****** AVENGER ****** \n {((Avenger)auxPersonaje).MostrarAvenger()}");
 
                     
                 }
-
-                if (auxPersonaje is Enemigo)
+                else if (auxPersonaje is Enemigo)
                 {
-                    sb.AppendFormat($"****** ENEMIGO ****** \n {auxPersonaje.ToString()}");
+                    sb.AppendFormat($"****** ENEMIGO ****** \n {((Enemigo)auxPersonaje).MostrarEnemigo()}");
 
                 }
 
