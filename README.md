@@ -1,4 +1,4 @@
-# Ejemplo primer parcial V1. 
+# Ejemplo primer parcial V2. 
 
 
 ## Proyecto: Marvel.
@@ -16,22 +16,30 @@ Este parcial fue tomado en el año 2021, los temas vistos son:
 ## Desarrollo de temas
 
 
-- ### Uso de herencia:
-    Mostramos los datos del personaje usando la clase base.
+- ### Sobrecarga de operadores:
+    Se sobrecargo el operado "==" para retorne true si dentro de una lista se encuentra un objeto "personaje" ( Recordar si se sobrecarga el == tenemos que sobrecargar el != ).
 
 ~~~ C# (lenguaje en el que esta escrito)
         /// <summary>
-        /// Muestra la informacion del enemigo
+        /// Al igualar la lista de personajes con una personaje, devuelve si esta el personaje
         /// </summary>
-        /// <returns>un string</returns>
-        public string MostrarEnemigo()
+        /// <param name="listaPersonajes"></param>
+        /// <param name="personaje"></param>
+        /// <returns>retorna un true si esta el personaje </returns>
+        public static bool operator ==(List<Personaje> listaPersonajes, Personaje personaje)
         {
-            StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"{this.Nombre}");
-            sb.Append(base.Mostrar());
-            sb.AppendLine($"Su objetivo es {this.objetivo}");
+            if (!(personaje is null))
+            {
+                foreach (Personaje auxPersonaje in listaPersonajes)
+                {
+                    if (auxPersonaje.nombre == personaje.nombre && auxPersonaje.GetType() == personaje.GetType())
+                    {
+                        return true;
+                    }
 
-            return sb.ToString();
+                }
+            }
+            return false;
         }
 ~~~
 

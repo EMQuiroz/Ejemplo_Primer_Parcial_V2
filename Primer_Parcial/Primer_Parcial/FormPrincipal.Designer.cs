@@ -29,13 +29,14 @@ namespace Primer_Parcial
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.btnMostrarPersonajes = new System.Windows.Forms.Button();
             this.rtbPersonajes = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // btnMostrarPersonajes
             // 
-            this.btnMostrarPersonajes.Location = new System.Drawing.Point(228, 47);
+            this.btnMostrarPersonajes.Location = new System.Drawing.Point(229, 12);
             this.btnMostrarPersonajes.Name = "btnMostrarPersonajes";
             this.btnMostrarPersonajes.Size = new System.Drawing.Size(173, 31);
             this.btnMostrarPersonajes.TabIndex = 0;
@@ -56,13 +57,14 @@ namespace Primer_Parcial
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(634, 450);
             this.Controls.Add(this.rtbPersonajes);
             this.Controls.Add(this.btnMostrarPersonajes);
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Esteban.Marcelo.Quiroz.Ejemplo.V1";
+            this.Text = "Esteban.Marcelo.Quiroz.Ejemplo";
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.ResumeLayout(false);
 

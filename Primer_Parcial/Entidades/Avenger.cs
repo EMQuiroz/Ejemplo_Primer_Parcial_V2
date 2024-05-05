@@ -17,7 +17,11 @@ namespace Entidades
 
         }
 
-        private string Nombre 
+        
+
+
+        
+        protected override string Nombre 
         {
             get 
             { 
@@ -30,12 +34,12 @@ namespace Entidades
         /// Muestra la informacion del avenger
         /// </summary>
         /// <returns> retorna un string</returns>
-        public string MostrarAvenger()
+        public override string ToString()
         {
             //Agregue la propiedad Nombre
             StringBuilder sb = new StringBuilder();
             sb.AppendLine($"{this.Nombre}");
-            sb.Append(base.Mostrar());
+            sb.Append(base.ToString());
             sb.AppendLine($"El equipamiento es {this.eEquipamento}");
 
             return sb.ToString();

@@ -18,7 +18,7 @@ namespace Entidades
         }
 
 
-        private string Nombre
+        protected override string Nombre
         {
             get
             { 
@@ -30,11 +30,11 @@ namespace Entidades
         /// Muestra la informacion del enemigo
         /// </summary>
         /// <returns>un string</returns>
-        public string MostrarEnemigo()
+        public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine($"{this.Nombre}");
-            sb.Append(base.Mostrar());
+            sb.Append(base.ToString());
             sb.AppendLine($"Su objetivo es {this.objetivo}");
 
             return sb.ToString();
