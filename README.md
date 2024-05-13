@@ -7,7 +7,7 @@
 
 ## Descripción
 Este parcial fue tomado en el año 2021, los temas vistos son:
-- Abstraccion, encapsulamiento, herencia.
+- Abstraccion, encapsulamiento, herencia, polimorfismo.
 - windows form.
 - proyecto de consola.
 - Clases estaticas.
